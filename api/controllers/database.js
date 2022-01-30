@@ -1,18 +1,13 @@
 const Sequelize = require('sequelize')
-require('dotenv').config()
 const fs = require('fs');
 
-try {
-    var config = JSON.parse(fs.readFileSync('C:\\Users\\Silva\\Desktop\\database-config.json', 'utf8').toString());
-} catch (e) {
-}
 
 const sequelize = new Sequelize(
-    process.env.DATABASE_NAME || config.databaseName,
-    process.env.DATABASE_USERNAME || config.username,
-    process.env.DATABASE_PASSWORD || config.password,
+    process.env.DATABASE_NAME,
+    process.env.DATABASE_USERNAME,
+    process.env.DATABASE_PASSWORD,
     {
-        host: process.env.DATABASE_HOST || config.host,
+        host: process.env.DATABASE_HOST,
         dialect: "mysql"
     })
 
