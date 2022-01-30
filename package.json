@@ -2,7 +2,7 @@
   "name": "questionapi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server"
   },
@@ -12,6 +12,7 @@
   "dependencies": {
     "consign": "^0.1.6",
     "dotenv": "^14.3.2",
+    "express": "^4.17.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.15.0"
   }
