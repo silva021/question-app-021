@@ -6,12 +6,12 @@ module.exports = (sequelize, Sequelize) => {
 
     },
     descricao: Sequelize.STRING,
-    codigoMateria: Sequelize.INTEGER,
+    codigoCategoria: Sequelize.INTEGER,
   },
     {
       timestamps: false,
       tableName: 't_questao'
     });
-
+    
   return Question;
 };

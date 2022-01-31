@@ -17,8 +17,10 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+db.alternative = require("../model/alternative")(sequelize, Sequelize);
+db.answers = require("../model/answers")(sequelize, Sequelize);
+db.category = require("../model/category")(sequelize, Sequelize);
+db.question = require("../model/question")(sequelize, Sequelize);
 db.subjects = require("../model/subject")(sequelize, Sequelize);
-// db.question = require("../model/question")(sequelize, Sequelize);
-sequelize.sync();
 
 module.exports = db

@@ -1,4 +1,3 @@
-console.log('controller')
 const db = require("./database");
 const subject = db.subjects;
 
